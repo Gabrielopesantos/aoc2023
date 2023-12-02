@@ -21,6 +21,7 @@ WORDS_TO_NUMBERS = {
     "nine": 9,
 }
 
+
 def compute(s: str) -> int:
     values: list[int] = []
     lines = s.splitlines()
@@ -36,7 +37,7 @@ def compute(s: str) -> int:
                         lower_bound_index = max(0, l+1-5)
                         if word_number in line[lower_bound_index:l+1]:
                             l_val = WORDS_TO_NUMBERS[word_number]
-                l+=1
+                l += 1
 
             if not r_val:
                 if line[r].isdigit():
@@ -47,7 +48,7 @@ def compute(s: str) -> int:
                         print(line, line[r-1:upper_bound_index])
                         if word_number in line[r-1:upper_bound_index]:
                             r_val = WORDS_TO_NUMBERS[word_number]
-                r-=1
+                r -= 1
 
             if l_val and r_val:
                 break

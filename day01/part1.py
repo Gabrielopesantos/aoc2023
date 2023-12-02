@@ -20,12 +20,12 @@ def compute(s: str) -> int:
             if line[l].isdigit():
                 l_val = int(line[l])
             else:
-                l+=1
+                l += 1
 
             if line[r].isdigit():
                 r_val = int(line[r])
             else:
-                r-=1
+                r -= 1
 
             if l_val and r_val:
                 break
