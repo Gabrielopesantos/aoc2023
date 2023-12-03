@@ -36,8 +36,10 @@ def compute(s: str) -> int:
             if next_split > len(game_data):
                 break
 
-            cubes_revealed, game_data = game_data[:next_split +
-                                                  1], game_data[next_split+1:]
+            cubes_revealed, game_data = game_data[
+                :next_split +
+                1
+            ], game_data[next_split+1:]
             num_cubes, color = cubes_revealed.strip(",; ").split()
             game_counter[color] = max(int(num_cubes), game_counter[color])
 

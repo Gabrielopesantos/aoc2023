@@ -38,8 +38,10 @@ def compute(s: str) -> int:
             if next_split > len(game_data):
                 break
 
-            cubes_revealed, game_data = game_data[:next_split +
-                                                  1], game_data[next_split+1:]
+            cubes_revealed, game_data = game_data[
+                :next_split +
+                1
+            ], game_data[next_split+1:]
             num_cubes, color = cubes_revealed.strip(",; ").split()
             if int(num_cubes) > MAX_CUBES[color]:
                 possible_game = False
